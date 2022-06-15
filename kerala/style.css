@@ -14,8 +14,9 @@
     text-decoration: none;
 }
 .bodyback{
-    background-size: cover ;
+   
     background-repeat: none;
+    background-size: cover ;
     background:url(./Images/backgroundplaces.webp);
 }
 
