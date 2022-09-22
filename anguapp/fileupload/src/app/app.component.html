@@ -1,0 +1,21 @@
+
+<!-- <input type="file" name="image" (change)="selectImage($event)">
+<button type="submit" (click)="addEmployee()()">upload</button> -->
+<!-- <form loginform="Form" (ngSubmit)="addEmployee()"> -->
+    <div class="login">
+        <h3 style="margin-right:70px">EMPLOYE REGISTRATION</h3>
+  <div>
+    <form class="inside" #userlogin="ngForm" action=""(ngSubmit)="addEmployee()">
+        
+       <div id="id1"><input type="text" #name="ngModel" required pattern="[A-Za-z]{1,32}" [(ngModel)]="employe.id" placeholder="Full name"  name="id"><br>
+        <span *ngIf="name.touched && name.invalid" style="color:red">enter fullname</span></div> 
+       <div id="id1">   <input type="text" name="name" [(ngModel)]="employe.name" placeholder="Location" id=""><br></div>
+    <div id="id1">  <input type="text" name="location" [(ngModel)]="employe.location" placeholder="Designation" id=""><br></div>
+<div id="id1"> <input type="Number" #number="ngModel" pattern="[1-9][0-9]{4}" required [(ngModel)]="employe.salary" name="salary" placeholder="Salary" id=""><br>
+    <span *ngIf="number.touched && number.invalid" style="color:red">enter salary</span></div>
+
+    
+<div> <button type="submit" [disabled]="userlogin.form.invalid" >submit</button></div>
+        </form>
+  </div>
+</div>
